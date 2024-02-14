@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import 'uno.css'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
 import cls from 'classnames'
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cls(inter.className, 'p-5')}>
+      <body className={cls(inter.className, 'p-10')}>
         <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>

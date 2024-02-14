@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import UnoCSS from '@unocss/webpack'
 
-export default nextConfig;
+const nextConfig = {
+  webpack: config => {
+    config.cache = false
+    config.plugins.push(UnoCSS())
+    return config
+  },
+}
+
+export default nextConfig
